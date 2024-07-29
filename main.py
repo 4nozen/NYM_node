@@ -93,7 +93,7 @@ StartLimitBurst=10
 [Service]
 User={linux_user}
 LimitNOFILE=65536
-ExecStart=/usr/local/bin/nym-node run --id {node_name} --deny-init --mode mixnode --accept-operator-terms-and-conditions
+ExecStart=sudo /usr/local/bin/nym-node run --id {node_name} --deny-init --mode mixnode --accept-operator-terms-and-conditions
 KillSignal=SIGINT
 Restart=on-failure
 RestartSec=30
