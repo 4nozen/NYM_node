@@ -82,7 +82,7 @@ def node_install():
     os.system("nym-node --version")
 
     node_name = input("Enter your node name: ")
-    os.system(f'nym-node run --id {node_name} --init-only --mode mixnode --verloc-bind-address 0.0.0.0:1790 --public-ips "$(curl -4 https://ifconfig.me)" --accept-operator-terms-and-conditions')
+    os.system(f'sudo nym-node run --id {node_name} --init-only --mode mixnode --verloc-bind-address 0.0.0.0:1790 --public-ips "$(curl -4 https://ifconfig.me)" --accept-operator-terms-and-conditions')
     linux_user = subprocess.run("who", shell=True, capture_output=True, text=True).stdout.split(" ")[0]
     # linux_user = 'root'
     os.system(f"""sudo echo '[Unit]
