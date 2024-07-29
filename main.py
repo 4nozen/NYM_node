@@ -76,8 +76,8 @@ def node_install():
     
     # os.system("sudo su")
     os.system("chmod +x nym-node")
-    # os.system("mv nym-node /usr/local/bin/")
-    os.system("cp nym-node /usr/local/bin/")
+    os.system("mv nym-node /usr/local/bin/")
+    # os.system("cp nym-node /usr/local/bin/")
     os.system("which nym-node")
     os.system("nym-node --version")
 
